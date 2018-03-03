@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "onboard-2018",
+  "private_key_id": "10f74d24d385996d6b6d955e02f76b068cf3ffbd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDbxwehofLwI7/4\nCXYPWD1KTIusRbBuAArk0cXKLKyCfuEeI+jBtBAjLGCQGR8wV5+FGcglhZFQ8sqP\nhS9qZ6zIhaGb11U8k/fujOeR0e+M2/sWCkTfqJ6vGCQ98nphdok1ueG801SMDJ1N\ne8xDas2olMh1eGcbpLLKo6DTGE4c79VOHmUuotZJIHCUZubsNLHHE9POUVQQ0uM3\nDNlwiQ3HulEvaK+gY8yawNjzjlsvKRS0K6mWgIdzYd4aeYuXbLzyZ+ocLPQi7Z6G\nz1NQ+8OfZ3pTbFlwNR4jei0r4UrVOTfDWeKOA15bHGQegVJGmUjutSz9Fl7k/E5f\nfNapY42ZAgMBAAECggEALqIyulc0x0OuriDDzkm455UKZgl7gDu+FAN25olIKYBm\noBCaiM9+RRhbfPf3qDhPftyTnXKT/QsndACcqQVKolnIitrMGUiEaTe4wzY6kDb1\nNh4DszmCQkDrH8HdueR/BMlmXrywye67Sf+kvgFhlg3L4zEjH7h4v4qsy13y5SyR\nvwck3AEKxuKbsClelEn6amFi94+jMjgAM1H7z0JM4NpZXXlFRSeNZmntd3Z5OR8c\nO1Q7MqDOnDCbgrBLueToq1QFJ56SESSMZCi9knOoVsyBZ9gCM8cBRsWfM1+M5wLv\nMmM/Sz3x46cGnjbFipVomN/Sp1LcUMagBsm3arMqoQKBgQD97Cik15gO10vVPbW6\nl3/bbhhTIL4pE4R7OsRaGwd3j5WDGdIpdwkkM1NuFj/f6FO/xoiWnHB+RA3oq/p8\nPlE39S5YV6UDBrQrqyrJkYT/SOlL0NIDCSbQz8ZTmOuIcIUh4teLFrNeHKVsQrmx\nsDMzRFo/bB+7CTgmV/w5t6/mfQKBgQDdk1qsXPjCqNlPHCGHryjXAPPkqPYfW4DN\nng+XgEAoVM2Kc6XdHo0W0uBnfQbku5Q/kLwsu+ml50nNYsqkF4WVZ+mgk08/NTaD\nAiJaMW6KtVJ5ZJHU4OdBQSqNvwShBnzRHLx78b+dPwAJ/L5j7BhWuAHV6FfPpHvw\ns6JfOntCTQKBgBQxn9ncO3+Sp7lBux4nxkdRLiYOSJFDuBmExvDTjXh4ts9CUnBx\nwwxZ+JycsF/CPkbWJy6zKk8gYmrKopUW76afnRvxfHINKm7+odx98jHLPqKE7O7I\n34ljvMYRN0oWiL/1JmctWv51EMLXW6VB+hBtsy+wDaX2Sbzi6nA8p4SRAoGBALpz\ngN2B7qJ/Sz3SwjRXJNqnppRHybRhX2WnGB+4gERv9/YFkxEa4EbQdJ0hDGf1oK5M\nsMxD5D0C/4uhEjw6vuIWavYAf7MEqDZd2WJkLkzyf9A+3KhyCKdUmuZkUxTdTLL6\np3D04PUFSpcc42laBrESbhj+RsYn91N5Fa1knMwRAoGBAIn/SXidWhNMenKdN2Lh\nJYB66rkif/Wgr3MgREGkf5ckZ06qM+aXXO9KcP0XzyuqYax2I/KxQP7fsF3hz/vx\nhhCkRgQ9Pkgj0ST4GqwGnSzStnedixoiK1BhXbfCBPEKVlcIfM1Gb9ezlmqoj3mR\nAdO4jKnRCM2ZExm0eU54M9oy\n-----END PRIVATE KEY-----\n",
+  "client_email": "bigdata-iot-sa@onboard-2018.iam.gserviceaccount.com",
+  "client_id": "102869508020405216776",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bigdata-iot-sa%40onboard-2018.iam.gserviceaccount.com"
+}
+
