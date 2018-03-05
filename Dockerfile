@@ -10,7 +10,6 @@ RUN apk update && \
     mkdir -p /onboard/05-iot-core && \
     mkdir -p /onboard/06-device && \
     mkdir -p /onboard/ca && \
-    mkdir -p /onboard/sa && \
     mkdir -p /onboard/device_keys && \
     mkdir -p /onboard/service-account
 
@@ -23,7 +22,6 @@ COPY 04-dataflow ./04-dataflow
 COPY 05-iot-core ./05-iot-core
 COPY 06-device ./06-device
 COPY ca ./ca
-COPY sa ./sa
 COPY device_keys ./device_keys
 COPY service-account ./service-account
 COPY src ./src
