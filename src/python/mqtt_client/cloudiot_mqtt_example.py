@@ -244,7 +244,7 @@ def main():
     min_temp_th = min_temp_range + 3
     max_temp_th = max_temp_range - 3
 
-    first_run = true
+    first_run = True
     preceeding_temperature = 0
     for i in range(1, args.num_messages + 1):
         if first_run:
