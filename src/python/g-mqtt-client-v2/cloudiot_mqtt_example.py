@@ -332,8 +332,8 @@ def main():
                     reference_date.day,
                 	reference_date.hour )
         print("This sensing's ts is: {}".format(reference_ts));
-        
-        payload = '{{ "message":"{}/{}-message-{}", "city":"{}", "temperature": "{}", "hour": "{}", "day": "{}", "month": "{}", "year": "{}" }}'.format(
+
+        payload = '{{ "message":"{}/{}-message-{}", "city":"{}", "temperature": "{}", "hour": "{}", "day": "{}", "month": "{}", "year": "{}", "fullts": "{}" }}'.format(
                     args.registry_id,
                 	args.device_id,
                 	i,
@@ -342,7 +342,8 @@ def main():
                 	reference_date.hour,
                     reference_date.day,
                     reference_date.month,
-                    reference_date.year)
+                    reference_date.year,
+                    reference_ts)
 
 #        print('Publishing message {}/{}: \'{}\''.format(
 #                i, args.num_messages, payload))
