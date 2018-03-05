@@ -3,21 +3,11 @@ kind: Job
 metadata:
   name: ${CUSTER_REGION}-${CITY_LOWER}-devices
 spec:
-#  replicas: 1
-#  selector:
-#    matchLabels:
-#      app: ${CUSTER_REGION}-${CITY_LOWER}-devices
-#      version: v1.0.0
   template:
     metadata:
       labels:
         app: ${CUSTER_REGION}-${CITY_LOWER}-devices
-#        version: v1.0.0
     spec:
-#      nodeSelector:
-#        <labelname>:value
-#        cloud.google.com/gke-nodepool: wp-hc-p
-#      backoffLimit: 2
       restartPolicy: Never
       containers:
       - name: ${CUSTER_REGION}-devices-${CITY_LOWER}
@@ -27,5 +17,3 @@ spec:
           requests:
             cpu: 100m
             memory: 100Mi
-#        ports:
-#        - containerPort: 9000
