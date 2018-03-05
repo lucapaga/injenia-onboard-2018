@@ -260,17 +260,17 @@ def main():
                 else:
                     if direction < 10:
                         delta = 1
-                    else if direction < 20:
+                    elif direction < 20:
                         delta = 2
                     else:
                         delta = 3
-            else if direction < 0:
+            elif direction < 0:
                 if preceeding_temperature >= min_temp_th:
                     delta = 0
                 else:
                     if direction > -10:
                         delta = -1
-                    else if direction > -20:
+                    elif direction > -20:
                         delta = -2
                     else:
                         delta = -3
