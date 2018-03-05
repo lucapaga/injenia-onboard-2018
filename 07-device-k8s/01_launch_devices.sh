@@ -9,6 +9,8 @@
 #  - sudo mv ./kubectl /usr/local/bin/kubectl
 #
 
+. ../01-setup/00_set_params.sh
+
 echo "========================================================================="
 echo ""
 echo "  Launching EUROPEAN devices ..."
