@@ -290,7 +290,7 @@ def main():
         	temperature,
         	reference_date.hour, reference_date.day, reference_date.month, reference_date.year)
 
-        print('Publishing message {}/{}: \'{}\''.format(i, args.num_messages, payload))
+        #print('Publishing message {}/{}: \'{}\''.format(i, args.num_messages, payload))
         seconds_since_issue = (datetime.datetime.utcnow() - jwt_iat).seconds
         if seconds_since_issue > 60 * jwt_exp_mins:
             print('Refreshing token after {}s').format(seconds_since_issue)
@@ -303,6 +303,7 @@ def main():
                 args.mqtt_bridge_port)
 
         # [REVIEW HERE] MQTT, NOT GOOGLE CLIENT API. QOS=1 --> AT-LEAST-ONCE SEMANTIC
+        print('Publishing message {}/{} to \'{}\': \'{}\''.format(i, args.num_messages, mqtt_topic, payload))
         client.publish(mqtt_topic, payload, qos=1)
 
     	# date progress
