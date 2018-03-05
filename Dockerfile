@@ -29,4 +29,4 @@ COPY src ./src
 #WORKDIR /onboard/src/python/g-mqtt-client-v2
 
 RUN cd /onboard/src/python/g-mqtt-client-v2 && \
-    pip install -i requirements.txt
+    pip install -r requirements.txt
