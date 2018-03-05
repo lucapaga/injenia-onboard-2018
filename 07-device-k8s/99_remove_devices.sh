@@ -11,12 +11,13 @@
 
 #gcloud container clusters get-credentials --zone ${k8s_cluster_eu_zone} ${k8s_cluster_eu_name}
 
-mkdir -p europe
+#mkdir -p europe
 for aCity in $(cat ../06-device/data/europa.txt); do
   export CUSTER_REGION=europe
   export CITY=${aCity}
   export CITY_LOWER=$(echo ${aCity} | tr '[:upper:]' '[:lower:]')
-  cat device-tpl.yaml | envsubst > europe/k8s-job-${CITY_LOWER}.yaml
+  #cat device-tpl.yaml | envsubst > europe/k8s-job-${CITY_LOWER}.yaml
+  kubectl delete job ${CUSTER_REGION}-${CITY_LOWER}-devices
 done
 
 # kubectl apply -f europe/*

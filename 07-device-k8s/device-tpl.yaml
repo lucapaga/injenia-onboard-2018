@@ -1,28 +1,28 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: ${CUSTER_REGION}-devices
+  name: ${CUSTER_REGION}-${CITY_LOWER}-devices
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: ${CUSTER_REGION}-devices
+#  replicas: 1
+#  selector:
+#    matchLabels:
+#      app: ${CUSTER_REGION}-${CITY_LOWER}-devices
 #      version: v1.0.0
   template:
     metadata:
       labels:
-        app: ${CUSTER_REGION}-devices
+        app: ${CUSTER_REGION}-${CITY_LOWER}-devices
 #        version: v1.0.0
     spec:
 #      nodeSelector:
 #        <labelname>:value
 #        cloud.google.com/gke-nodepool: wp-hc-p
-      backoffLimit: 2
+#      backoffLimit: 2
       restartPolicy: Never
       containers:
-      - name: ${CUSTER_REGION}-devices-${CITY}
-        image: eu.gcr.io/onboard-2018/iot-device-generic:1.0.0
-        command: ["./14_device_client_run_py.sh",  "${CITY}"]
+      - name: ${CUSTER_REGION}-devices-${CITY_LOWER}
+        image: eu.gcr.io/onboard-2018/iot-device-generic:1.0.1
+        command: ["/bin/bash", "14_device_client_run_py.sh", "${CITY}"]
         resources:
           requests:
             cpu: 100m
