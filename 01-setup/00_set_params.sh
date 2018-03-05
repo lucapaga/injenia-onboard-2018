@@ -55,8 +55,21 @@ topicFullName=projects/$projectID/topics/$topic
 
 # IoT CORE
 iotzone=europe-west1
-deviceName=demo-rs256-device-$flowName
-registryName=device-registry-$flowName
+deviceName=d-$iotzone-rs256-$flowName
+registryName=dreg-$iotzone-$flowName
+# - EUROPE -
+iotzone_eu=europe-west1
+deviceName_eu=d-$iotzone_eu-rs256-$flowName
+registryName_eu=dreg-$iotzone_eu-$flowName
+# - US -
+iotzone_us=us-central1
+deviceName_us=d-$iotzone_eu-rs256-$flowName
+registryName_us=dreg-$iotzone_eu-$flowName
+# - ASIA -
+iotzone_asia=asia-east1
+deviceName_asia=d-$iotzone_eu-rs256-$flowName
+registryName_asia=dreg-$iotzone_eu-$flowName
+
 
 # k8s
 k8s_cluster_eu_zone=europe-west1-b

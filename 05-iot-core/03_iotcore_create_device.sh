@@ -2,7 +2,17 @@
 
 # CONFIGURE YOUR DEVICE INTO THE REGISTRY YOU JUST CONFIGURED AND INTO THE SAME REGION
 # (https://cloud.google.com/sdk/gcloud/reference/beta/iot/devices/create)
-gcloud beta iot devices create $deviceName \
-	--region=$iotzone \
-	--registry=$registryName \
+gcloud beta iot devices create $deviceName_eu \
+	--region=$iotzone_eu \
+	--registry=$registryName_eu \
+	--public-key path=../device_keys/rsa_cert.pem,type=rs256
+
+gcloud beta iot devices create $deviceName_us \
+	--region=$iotzone_eu \
+	--registry=$registryName_eu \
+	--public-key path=../device_keys/rsa_cert.pem,type=rs256
+
+gcloud beta iot devices create $deviceName_asia \
+	--region=$iotzone_eu \
+	--registry=$registryName_eu \
 	--public-key path=../device_keys/rsa_cert.pem,type=rs256

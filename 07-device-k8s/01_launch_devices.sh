@@ -25,6 +25,9 @@ for aCity in $(cat ../06-device/data/${TXT_FILE_NAME}.txt); do
   export CUSTER_REGION=${DEVICES_ZONE}
   export CITY=${aCity}
   export CITY_LOWER=$(echo ${aCity} | tr '[:upper:]' '[:lower:]')
+  export REGISTRY_NAME=${registryName_eu}
+  export DEVICE_NAME=${deviceName_eu}
+  export IOT_ZONE=${iotzone_eu}
   cat device-tpl.yaml | envsubst > ${DEVICES_ZONE}/k8s-job-${CITY_LOWER}.yaml
 done
 kubectl apply -f ${DEVICES_ZONE}
@@ -45,6 +48,9 @@ for aCity in $(cat ../06-device/data/${TXT_FILE_NAME}.txt); do
   export CUSTER_REGION=${DEVICES_ZONE}
   export CITY=${aCity}
   export CITY_LOWER=$(echo ${aCity} | tr '[:upper:]' '[:lower:]')
+  export REGISTRY_NAME=${registryName_us}
+  export DEVICE_NAME=${deviceName_us}
+  export IOT_ZONE=${iotzone_us}
   cat device-tpl.yaml | envsubst > ${DEVICES_ZONE}/k8s-job-${CITY_LOWER}.yaml
 done
 kubectl apply -f ${DEVICES_ZONE}
@@ -65,6 +71,9 @@ for aCity in $(cat ../06-device/data/${TXT_FILE_NAME}.txt); do
   export CUSTER_REGION=${DEVICES_ZONE}
   export CITY=${aCity}
   export CITY_LOWER=$(echo ${aCity} | tr '[:upper:]' '[:lower:]')
+  export REGISTRY_NAME=${registryName_asia}
+  export DEVICE_NAME=${deviceName_asia}
+  export IOT_ZONE=${iotzone_asia}
   cat device-tpl.yaml | envsubst > ${DEVICES_ZONE}/k8s-job-${CITY_LOWER}.yaml
 done
 kubectl apply -f ${DEVICES_ZONE}
@@ -84,6 +93,9 @@ for aCity in $(cat ../06-device/data/${TXT_FILE_NAME}.txt); do
   export CUSTER_REGION=${DEVICES_ZONE}
   export CITY=${aCity}
   export CITY_LOWER=$(echo ${aCity} | tr '[:upper:]' '[:lower:]')
+  export REGISTRY_NAME=${registryName_asia}
+  export DEVICE_NAME=${deviceName_asia}
+  export IOT_ZONE=${iotzone_asia}
   cat device-tpl.yaml | envsubst > ${DEVICES_ZONE}/k8s-job-${CITY_LOWER}.yaml
 done
 kubectl apply -f ${DEVICES_ZONE}

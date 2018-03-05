@@ -11,8 +11,8 @@ spec:
       restartPolicy: Never
       containers:
       - name: ${CUSTER_REGION}-devices-${CITY_LOWER}
-        image: eu.gcr.io/onboard-2018/iot-device-generic:1.0.1
-        command: ["/bin/bash", "14_device_client_run_py.sh", "${CITY}"]
+        image: eu.gcr.io/onboard-2018/iot-device-generic:1.0.2
+        command: ["/bin/bash", "14_device_client_run_py.sh", "${CITY}", "${REGISTRY_NAME}", "${DEVICE_NAME}", "${IOT_ZONE}" ]
         resources:
           requests:
             cpu: 100m

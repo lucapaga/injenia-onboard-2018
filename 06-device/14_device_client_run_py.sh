@@ -32,16 +32,29 @@ then
 
 else
 
-  python cloudiot_mqtt_example.py \
-                  --project_id $projectID \
-                  --registry_id $registryName \
-                  --device_id $deviceName \
-                  --private_key_file ../../../device_keys/rsa_private.pem \
-                  --algorithm RS256 \
-                  --cloud_region $iotzone \
-                  --num_messages 5000 \
-                  --ca_certs ../../../ca/roots.pem \
-                  --sensed_city $1
+  if [ -z $2 ];
+  then
+    python cloudiot_mqtt_example.py \
+                    --project_id $projectID \
+                    --registry_id $registryName \
+                    --device_id $deviceName \
+                    --private_key_file ../../../device_keys/rsa_private.pem \
+                    --algorithm RS256 \
+                    --cloud_region $iotzone \
+                    --num_messages 5000 \
+                    --ca_certs ../../../ca/roots.pem \
+                    --sensed_city $1
+  else
+    python cloudiot_mqtt_example.py \
+                    --project_id $projectID \
+                    --registry_id $2 \
+                    --device_id $3 \
+                    --private_key_file ../../../device_keys/rsa_private.pem \
+                    --algorithm RS256 \
+                    --cloud_region $4 \
+                    --num_messages 5000 \
+                    --ca_certs ../../../ca/roots.pem \
+                    --sensed_city $1
 
 fi
 #	--num_messages 1000 \
