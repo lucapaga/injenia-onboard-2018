@@ -20,7 +20,7 @@ DEVICES_ZONE=europe
 TXT_FILE_NAME=europa
 gcloud container clusters get-credentials --zone ${k8s_cluster_eu_zone} ${k8s_cluster_eu_name}
 mkdir -p ${DEVICES_ZONE}
-rm -rf ${DEVICES_ZONE}/*
+rm -rf ${DEVICES_ZONE}/*.yaml
 for aCity in $(cat ../06-device/data/${TXT_FILE_NAME}.txt); do
   export CUSTER_REGION=${DEVICES_ZONE}
   export CITY=${aCity}
@@ -43,7 +43,7 @@ DEVICES_ZONE=america
 TXT_FILE_NAME=na
 gcloud container clusters get-credentials --zone ${k8s_cluster_us_zone} ${k8s_cluster_us_name}
 mkdir -p ${DEVICES_ZONE}
-rm -rf ${DEVICES_ZONE}/*
+rm -rf ${DEVICES_ZONE}/*.yaml
 for aCity in $(cat ../06-device/data/${TXT_FILE_NAME}.txt); do
   export CUSTER_REGION=${DEVICES_ZONE}
   export CITY=${aCity}
@@ -66,7 +66,7 @@ DEVICES_ZONE=asia
 TXT_FILE_NAME=oriente
 gcloud container clusters get-credentials --zone ${k8s_cluster_asia_zone} ${k8s_cluster_asia_name}
 mkdir -p ${DEVICES_ZONE}
-rm -rf ${DEVICES_ZONE}/*
+rm -rf ${DEVICES_ZONE}/*.yaml
 for aCity in $(cat ../06-device/data/${TXT_FILE_NAME}.txt); do
   export CUSTER_REGION=${DEVICES_ZONE}
   export CITY=${aCity}
@@ -88,7 +88,7 @@ echo "-------------------------------------------------------------------------"
 DEVICES_ZONE=oceania
 TXT_FILE_NAME=oceania
 mkdir -p ${DEVICES_ZONE}
-rm -rf ${DEVICES_ZONE}/*
+rm -rf ${DEVICES_ZONE}/*.yaml
 for aCity in $(cat ../06-device/data/${TXT_FILE_NAME}.txt); do
   export CUSTER_REGION=${DEVICES_ZONE}
   export CITY=${aCity}

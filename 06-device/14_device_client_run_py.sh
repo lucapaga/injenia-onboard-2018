@@ -55,7 +55,7 @@ else
                     --num_messages 5000 \
                     --ca_certs ../../../ca/roots.pem \
                     --sensed_city $1
-
+  fi
 fi
 #	--num_messages 1000 \
 #	--message_type event \

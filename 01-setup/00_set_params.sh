@@ -22,7 +22,7 @@ echo "GCS Project is: $projectID"
 service_account_key_path=../service-account/bigdata-iot-sa.json
 service_account_email=bigdata-iot-sa@onboard-2018.iam.gserviceaccount.com
 
-session=20180307_02
+session=20180307_dr2
 
 #if you want to run the demo multiple times, just increment this variable
 V=onboard_$session
@@ -63,12 +63,12 @@ deviceName_eu=d-$iotzone_eu-rs256-$flowName
 registryName_eu=dreg-$iotzone_eu-$flowName
 # - US -
 iotzone_us=us-central1
-deviceName_us=d-$iotzone_eu-rs256-$flowName
-registryName_us=dreg-$iotzone_eu-$flowName
+deviceName_us=d-$iotzone_us-rs256-$flowName
+registryName_us=dreg-$iotzone_us-$flowName
 # - ASIA -
 iotzone_asia=asia-east1
-deviceName_asia=d-$iotzone_eu-rs256-$flowName
-registryName_asia=dreg-$iotzone_eu-$flowName
+deviceName_asia=d-$iotzone_asia-rs256-$flowName
+registryName_asia=dreg-$iotzone_asia-$flowName
 
 
 # k8s

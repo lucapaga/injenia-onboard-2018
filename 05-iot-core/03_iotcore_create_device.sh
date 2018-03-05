@@ -8,11 +8,11 @@ gcloud beta iot devices create $deviceName_eu \
 	--public-key path=../device_keys/rsa_cert.pem,type=rs256
 
 gcloud beta iot devices create $deviceName_us \
-	--region=$iotzone_eu \
-	--registry=$registryName_eu \
+	--region=$iotzone_us \
+	--registry=$registryName_us \
 	--public-key path=../device_keys/rsa_cert.pem,type=rs256
 
 gcloud beta iot devices create $deviceName_asia \
-	--region=$iotzone_eu \
-	--registry=$registryName_eu \
+	--region=$iotzone_asia \
+	--registry=$registryName_asia \
 	--public-key path=../device_keys/rsa_cert.pem,type=rs256

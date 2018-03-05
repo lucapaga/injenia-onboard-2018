@@ -21,7 +21,7 @@ done
 
 gcloud container clusters get-credentials --zone ${k8s_cluster_us_zone} ${k8s_cluster_us_name}
 for aCity in $(cat ../06-device/data/na.txt); do
-  export CUSTER_REGION=europe
+  export CUSTER_REGION=america
   export CITY=${aCity}
   export CITY_LOWER=$(echo ${aCity} | tr '[:upper:]' '[:lower:]')
   #cat device-tpl.yaml | envsubst > europe/k8s-job-${CITY_LOWER}.yaml
@@ -30,14 +30,14 @@ done
 
 gcloud container clusters get-credentials --zone ${k8s_cluster_asia_zone} ${k8s_cluster_asia_name}
 for aCity in $(cat ../06-device/data/oriente.txt); do
-  export CUSTER_REGION=europe
+  export CUSTER_REGION=asia
   export CITY=${aCity}
   export CITY_LOWER=$(echo ${aCity} | tr '[:upper:]' '[:lower:]')
   #cat device-tpl.yaml | envsubst > europe/k8s-job-${CITY_LOWER}.yaml
   kubectl delete job ${CUSTER_REGION}-${CITY_LOWER}-devices
 done
 for aCity in $(cat ../06-device/data/oceania.txt); do
-  export CUSTER_REGION=europe
+  export CUSTER_REGION=oceania
   export CITY=${aCity}
   export CITY_LOWER=$(echo ${aCity} | tr '[:upper:]' '[:lower:]')
   #cat device-tpl.yaml | envsubst > europe/k8s-job-${CITY_LOWER}.yaml

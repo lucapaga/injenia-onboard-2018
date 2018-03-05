@@ -32,3 +32,6 @@ RUN  find ./ -name \*.sh | xargs chmod u+x
 
 RUN cd /onboard/src/python/g-mqtt-client-v2 && \
     pip install -r requirements.txt
+
+WORKDIR /onboard/06-device
+
