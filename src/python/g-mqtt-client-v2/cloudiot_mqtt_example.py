@@ -253,6 +253,8 @@ def main():
         args.mqtt_bridge_hostname, args.mqtt_bridge_port)
 
 ##-----------[CUSTOMIZATION STARTS]--------------------------------------------#
+    city = args.sensed_city
+
     reference_date = datetime.datetime.today()
     reference_date = reference_date.replace(year=2017)
     reference_date = reference_date.replace(month=10)
