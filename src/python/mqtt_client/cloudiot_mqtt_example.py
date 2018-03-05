@@ -255,8 +255,8 @@ def main():
             direction = random.uniform(-30, 30)
             delta = 0
             if direction > 0:
-                if preceeding_temperature <= max_temp_th:
-                    delta = 0
+                if preceeding_temperature >= max_temp_th:
+                    delta = -3
                 else:
                     if direction < 10:
                         delta = 1
@@ -265,8 +265,8 @@ def main():
                     else:
                         delta = 3
             elif direction < 0:
-                if preceeding_temperature >= min_temp_th:
-                    delta = 0
+                if preceeding_temperature <= min_temp_th:
+                    delta = 3
                 else:
                     if direction > -10:
                         delta = -1
