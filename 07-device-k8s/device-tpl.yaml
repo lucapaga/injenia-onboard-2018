@@ -22,7 +22,7 @@ spec:
       containers:
       - name: ${CUSTER_REGION}-devices-${CITY}
         image: eu.gcr.io/onboard-2018/iot-device-generic:1.0.0
-        command: ["python",  "${CITY}"]
+        command: ["./14_device_client_run_py.sh",  "${CITY}"]
         resources:
           requests:
             cpu: 100m
