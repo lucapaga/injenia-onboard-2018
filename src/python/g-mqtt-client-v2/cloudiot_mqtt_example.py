@@ -327,10 +327,10 @@ def main():
 #                args.registry_id, args.device_id, i)
         # 1970-01-01 00:00:00 UTC
         reference_ts = "{}-{}-{} {}:00:00".format(
-                    reference_date.year,
-                    reference_date.month,
-                    reference_date.day,
-                	reference_date.hour )
+                    str(reference_date.year).zfill(4),
+                    str(reference_date.month).zfill(2),
+                    str(reference_date.day).zfill(2),
+                	str(reference_date.hour).zfill(2) )
         print("This sensing's ts is: {}".format(reference_ts));
 
         payload = '{{ "message":"{}/{}-message-{}", "city":"{}", "temperature": "{}", "hour": "{}", "day": "{}", "month": "{}", "year": "{}", "fullts": "{}" }}'.format(
