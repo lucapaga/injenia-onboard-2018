@@ -195,6 +195,10 @@ def parse_command_line_args():
             help='Number of messages to publish.')
 ##-----------[CUSTOMIZATION STARTS]--------------------------------------------#
     parser.add_argument(
+            '--sensed_city',
+            default='Bologna',
+            help=('A city in the world'))
+    parser.add_argument(
             '--min_temp',
             type=int,
             default=-20,
