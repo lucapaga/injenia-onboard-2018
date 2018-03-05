@@ -1,0 +1,31 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ${CUSTER_REGION}-devices
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ${CUSTER_REGION}-devices
+#      version: v1.0.0
+  template:
+    metadata:
+      labels:
+        app: ${CUSTER_REGION}-devices
+#        version: v1.0.0
+    spec:
+#      nodeSelector:
+#        <labelname>:value
+#        cloud.google.com/gke-nodepool: wp-hc-p
+      backoffLimit: 2
+      restartPolicy: Never
+      containers:
+      - name: ${CUSTER_REGION}-devices-${CITY}
+        image: eu.gcr.io/onboard-2018/iot-device-generic:1.0.0
+        command: ["python",  "${CITY}"]
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+#        ports:
+#        - containerPort: 9000

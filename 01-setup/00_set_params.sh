@@ -57,3 +57,11 @@ topicFullName=projects/$projectID/topics/$topic
 iotzone=europe-west1
 deviceName=demo-rs256-device-$flowName
 registryName=device-registry-$flowName
+
+# k8s
+k8s_cluster_eu_zone=europe-west1-b
+k8s_cluster_eu_name=oboard-2018-iot-devices-eu
+k8s_cluster_us_zone=us-central1-a
+k8s_cluster_us_name=oboard-2018-iot-devices-us
+k8s_cluster_asia_zone=asia-east1-b
+k8s_cluster_asia_name=oboard-2018-iot-devices-asia
