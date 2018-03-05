@@ -250,7 +250,7 @@ def main():
         if first_run:
             temperature = random.uniform(min_temp_range, max_temp_range)
             preceeding_temperature = temperature
-            first_run = false
+            first_run = False
         else:
             direction = random.uniform(-30, 30)
             delta = 0
