@@ -19,28 +19,28 @@ if [ -z $1 ];
 then
 
   python cloudiot_mqtt_example.py \
-	--project_id $projectID \
-	--registry_id $registryName \
-	--device_id $deviceName \
-        --private_key_file ../../../device_keys/rsa_private.pem \
-	--algorithm RS256 \
-	--cloud_region $iotzone \
-	--num_messages 1000 \
-	--ca_certs ../../../device_keys/roots.pem \
-	--sensed_city "Bologna"
+                	--project_id $projectID \
+                	--registry_id $registryName \
+                	--device_id $deviceName \
+                  --private_key_file ../../../device_keys/rsa_private.pem \
+                	--algorithm RS256 \
+                	--cloud_region $iotzone \
+                	--num_messages 1000 \
+                	--ca_certs ../../../ca/roots.pem \
+                	--sensed_city "Bologna"
 
 else
 
   python cloudiot_mqtt_example.py \
-        --project_id $projectID \
-        --registry_id $registryName \
-        --device_id $deviceName \
-        --private_key_file ../../../device_keys/rsa_private.pem \
-        --algorithm RS256 \
-        --cloud_region $iotzone \
-        --num_messages 5000 \
-        --ca_certs ../../../device_keys/roots.pem \
-        --sensed_city $1
+                  --project_id $projectID \
+                  --registry_id $registryName \
+                  --device_id $deviceName \
+                  --private_key_file ../../../device_keys/rsa_private.pem \
+                  --algorithm RS256 \
+                  --cloud_region $iotzone \
+                  --num_messages 5000 \
+                  --ca_certs ../../../ca/roots.pem \
+                  --sensed_city $1
 
 fi
 #	--num_messages 1000 \

@@ -174,6 +174,16 @@ def parse_command_line_args():
             default=100,
             help='Number of messages to publish.')
     parser.add_argument(
+            '--min_temp',
+            type=int,
+            default=-20,
+            help='MIN temperature')
+    parser.add_argument(
+            '--max_temp',
+            type=int,
+            default=40,
+            help='MAX temperature')
+    parser.add_argument(
             '--message_type',
             choices=('event', 'state'),
             default='event',
@@ -229,10 +239,42 @@ def main():
     reference_date = reference_date.replace(month=10)
     reference_date = reference_date.replace(day=1)
 
-    for i in range(1, args.num_messages + 1):
+    min_temp_range = args.min_temp
+    max_temp_range = args.max_temp
+    min_temp_th = min_temp_range + 3
+    max_temp_th = max_temp_range - 3
 
-        # [REVIEW HERE] YOU CAN CHANGE THIS SOLUTION IF YOU HAVE A SMARTER ONE  ...
-        temperature=random.uniform(-20, 40)
+    first_run = true
+    preceeding_temperature = 0
+    for i in range(1, args.num_messages + 1):
+        if first_run:
+            temperature = random.uniform(min_temp_range, max_temp_range)
+            preceeding_temperature = temperature
+            first_run = false
+        else:
+            direction = random.uniform(-30, 30)
+            delta = 0
+            if direction > 0:
+                if preceeding_temperature <= max_temp_th:
+                    delta = 0
+                else:
+                    if direction < 10:
+                        delta = 1
+                    else if direction < 20:
+                        delta = 2
+                    else:
+                        delta = 3
+            else if direction < 0:
+                if preceeding_temperature >= min_temp_th:
+                    delta = 0
+                else:
+                    if direction > -10:
+                        delta = -1
+                    else if direction > -20:
+                        delta = -2
+                    else:
+                        delta = -3
+            temperature += delta
 
         # [REVIEW HERE] PREPARE THE MESSAGE OF YOUR DEVICE. REQUIREMENTS:
         #   - JSON
