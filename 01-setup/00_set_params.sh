@@ -22,7 +22,7 @@ echo "GCS Project is: $projectID"
 service_account_key_path=../service-account/bigdata-iot-sa.json
 service_account_email=bigdata-iot-sa@onboard-2018.iam.gserviceaccount.com
 
-session=20180307
+session=20180307_02
 
 #if you want to run the demo multiple times, just increment this variable
 V=onboard_$session

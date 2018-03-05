@@ -8,5 +8,7 @@
 #  - day: a day of the month (1-based)
 #  - month: a month (1-based)
 #  - year: year
-bq mk -t $table message:STRING,city:STRING,temperature:float,hour:INTEGER,day:INTEGER,month:INTEGER,year:INTEGER
+#  - fullts: the full timestamp
 
+#bq mk -t $table message:STRING,city:STRING,temperature:float,hour:INTEGER,day:INTEGER,month:INTEGER,year:INTEGER
+bq mk -t $table message:STRING,city:STRING,temperature:float,hour:INTEGER,day:INTEGER,month:INTEGER,year:INTEGER,fullts:TIMESTAMP
