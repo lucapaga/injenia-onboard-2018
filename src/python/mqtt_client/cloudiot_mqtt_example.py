@@ -275,6 +275,8 @@ def main():
                     else:
                         delta = -3
             temperature += delta
+            print('[C: {}] - P: {} - D: {} - F: {}'.format(city, preceeding_temperature, delta, temperature))
+            preceeding_temperature = temperature
 
         # [REVIEW HERE] PREPARE THE MESSAGE OF YOUR DEVICE. REQUIREMENTS:
         #   - JSON
