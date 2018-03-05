@@ -1,7 +1,7 @@
-FROM python:2.7-alpine
+FROM python:2.7
 MAINTAINER luca.paganelli@injenia.it
 
-RUN apk update && \
+RUN apt-get update && \
     mkdir -p /onboard && \
     mkdir -p /onboard/01-setup && \
     mkdir -p /onboard/02-pubsub && \
@@ -25,6 +25,8 @@ COPY ca ./ca
 COPY device_keys ./device_keys
 COPY service-account ./service-account
 COPY src ./src
+
+RUN  find ./ -name \*.sh | xargs chmod u+x
 
 #WORKDIR /onboard/src/python/g-mqtt-client-v2
 
