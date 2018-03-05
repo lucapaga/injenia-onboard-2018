@@ -325,6 +325,14 @@ def main():
 ##-----------[CUSTOMIZATION STARTS]--------------------------------------------#
 #        payload = '{}/{}-payload-{}'.format(
 #                args.registry_id, args.device_id, i)
+        # 1970-01-01 00:00:00 UTC
+        reference_ts = "{}-{}-{} {}:00:00 UTC".format(
+                    reference_date.year,
+                    reference_date.month,
+                    reference_date.day,
+                	reference_date.hour )
+        print("This sensing's ts is: {}".format(reference_ts));
+        
         payload = '{{ "message":"{}/{}-message-{}", "city":"{}", "temperature": "{}", "hour": "{}", "day": "{}", "month": "{}", "year": "{}" }}'.format(
                     args.registry_id,
                 	args.device_id,
