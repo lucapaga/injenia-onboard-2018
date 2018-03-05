@@ -326,7 +326,7 @@ def main():
 #        payload = '{}/{}-payload-{}'.format(
 #                args.registry_id, args.device_id, i)
         # 1970-01-01 00:00:00 UTC
-        reference_ts = "{}-{}-{} {}:00:00 UTC".format(
+        reference_ts = "{}-{}-{} {}:00:00".format(
                     reference_date.year,
                     reference_date.month,
                     reference_date.day,
