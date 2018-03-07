@@ -22,7 +22,7 @@ echo "GCS Project is: $projectID"
 service_account_key_path=../service-account/bigdata-iot-sa.json
 service_account_email=bigdata-iot-sa@onboard-2018.iam.gserviceaccount.com
 
-session=20180307_dr2
+session=20180307_BO
 
 #if you want to run the demo multiple times, just increment this variable
 V=onboard_$session
@@ -38,7 +38,7 @@ bucket=$projectID-$session-iot-demo
 tempLocation=$bucket/$flowName/temp/
 
 # BIGQUERY
-dataset=DATASET_ONBOARD_2018
+dataset=DATASET_ONBOARD_${session}
 table=$projectID:$dataset.${flowName}_TABLE
 
 # DATAFLOW
