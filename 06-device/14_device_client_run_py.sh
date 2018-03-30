@@ -28,7 +28,7 @@ then
                 	--cloud_region $iotzone \
                 	--num_messages 1000 \
                 	--ca_certs ../../../ca/roots.pem \
-                	--sensed_city "Bologna"
+                	--sensed_city "Albignasego"
 
 else
 

@@ -22,7 +22,8 @@ echo "GCS Project is: $projectID"
 service_account_key_path=../service-account/bigdata-iot-sa.json
 service_account_email=bigdata-iot-sa@onboard-2018.iam.gserviceaccount.com
 
-session=20180307_BO
+session=20180307_PD
+session_gcs=20180307-pd
 
 #if you want to run the demo multiple times, just increment this variable
 V=onboard_$session
@@ -34,7 +35,7 @@ flowName=flow_$V
 
 # GOOGLE CLOUD STORAGE
 gcsRegion=europe-west1
-bucket=$projectID-$session-iot-demo
+bucket=$projectID-${session_gcs}
 tempLocation=$bucket/$flowName/temp/
 
 # BIGQUERY
@@ -72,6 +73,8 @@ registryName_asia=dreg-$iotzone_asia-$flowName
 
 
 # k8s
+docker_image_name=eu.gcr.io/onboard-2018/iot-device-generic
+docker_image_tag=v-${session_gcs}
 k8s_cluster_eu_zone=europe-west1-b
 k8s_cluster_eu_name=oboard-2018-iot-devices-eu
 k8s_cluster_us_zone=us-central1-a
